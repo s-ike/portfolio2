@@ -1,0 +1,10 @@
+@use "../global" as g;
+
+.heading-primary {
+  color: g.$color-primay;
+  text-transform: uppercase;
+  @include g.font-size(30);
+  @include g.mq(md) {
+    @include g.font-size(25);
+  }
+}

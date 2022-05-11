@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+.about {
+  &__inner {
+    max-width: 648px;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    @include g.font-size(24);
+  }
+}

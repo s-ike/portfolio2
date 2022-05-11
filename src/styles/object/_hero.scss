@@ -1,0 +1,22 @@
+@use "../global" as g;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(../images/hero.jpg);
+
+  &__title {
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include g.font-size(30);
+    @include g.mq(md) {
+      line-height: 1.1;
+
+      @include g.font-size(26);
+    }
+  }
+}
