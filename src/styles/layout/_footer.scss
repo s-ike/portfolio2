@@ -1,0 +1,18 @@
+@use "../global" as g;
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  color: g.$color-back;
+  background-color: g.$color-text;
+  padding: 60px 30px;
+  &__title {
+    border-right: 1.4px solid g.$color-back;
+    padding-right: 1rem;
+    @include g.font-size(20);
+  }
+  &__copyright {
+    padding-left: 1rem;
+    @include g.font-size(16);
+  }
+}

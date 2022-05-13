@@ -1,10 +1,14 @@
 import React from "react";
+import Footer from "./footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ pagetitle, children }) => {
   return (
-    <div className="layout">
-      <main>{children}</main>
-    </div>
+    <>
+      <div className="layout">
+        <main>{children}</main>
+      </div>
+      <Footer pagetitle={pagetitle} />
+    </>
   )
 }
 

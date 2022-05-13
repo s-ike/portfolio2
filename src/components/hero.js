@@ -1,21 +1,10 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
-export default function Hero() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+export default function Hero({ pagetitle }) {
   return (
     <div className="hero">
       <div class="hero__heading">
-        <div class="hero__title">{data.site.siteMetadata.title}</div>
+        <div class="hero__title">{pagetitle}</div>
       </div>
     </div>
   )
