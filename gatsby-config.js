@@ -5,7 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `s-ikeda portfolio website`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
