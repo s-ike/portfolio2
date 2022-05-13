@@ -1,20 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Aboutme from "../components/aboutme"
 
-export default function Home() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+export default function Home({ data }) {
   return (
     <>
       <Hero pagetitle={data.site.siteMetadata.title} />
@@ -24,3 +14,13 @@ export default function Home() {
     </>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
