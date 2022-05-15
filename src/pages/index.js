@@ -7,9 +7,14 @@ import Aboutme from "../components/aboutme"
 export default function Home({ data }) {
   return (
     <>
-      <Hero pagetitle={data.site.siteMetadata.title} />
-      <Layout pagetitle={data.site.siteMetadata.title}>
-        <Aboutme />
+      <Hero title={data.site.siteMetadata.title} />
+      <Layout
+        title={data.site.siteMetadata.title}
+        author={data.site.siteMetadata.author}
+      >
+        <Aboutme
+          author={data.site.siteMetadata.author}
+        />
       </Layout>
     </>
   )
@@ -20,6 +25,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        author
       }
     }
   }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Aboutme() {
+export default function Aboutme({ author }) {
   return (
     <section className="about section">
       <div className="about__inner inner">
@@ -8,7 +8,7 @@ export default function Aboutme() {
           <h2 className="heading-primary">about me</h2>
         </div>
         <div className="about__body">
-          <div className="about__title">Shuntaro IKEDA</div>
+          <div className="about__title">{author}</div>
           <div className="about__text">
             <p>
               業務では主にwebアプリの開発をしています。<br />

@@ -7,6 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `s-ikeda portfolio website`,
+    author: 'Shuntaro IKEDA',
   },
   plugins: [
     {

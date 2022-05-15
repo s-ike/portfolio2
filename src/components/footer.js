@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function Footer({ pagetitle }) {
+export default function Footer({ title, author }) {
   return (
     <footer className="footer">
       <div className="footer__title">
-        {pagetitle}
+        {title}
       </div>
       <div className="footer__copyright">
-        &copy;2022 s-ikeda
+        &copy;2022 {author}
       </div>
     </footer>
   )
