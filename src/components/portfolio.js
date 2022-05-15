@@ -9,6 +9,7 @@ export default function Portfolio() {
           frontmatter {
             title
           }
+          id
         }
       }
     }
@@ -24,7 +25,7 @@ export default function Portfolio() {
           <ul>
           {
             data.allMdx.nodes.map(node => (
-              <li>{node.frontmatter.title}</li>
+              <li key={node.id}>{node.frontmatter.title}</li>
             ))
           }
           </ul>
