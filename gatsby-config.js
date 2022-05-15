@@ -13,5 +13,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/portfolio`,
+      }
+    },
+    `gatsby-plugin-mdx`,
   ],
 }
