@@ -1,8 +1,7 @@
-@use "../global" as g;
+@use "../../global" as g;
 
-.about {
+.portfolio {
   &__inner {
-    max-width: 648px;
   }
   &__heading {
     text-align: center;

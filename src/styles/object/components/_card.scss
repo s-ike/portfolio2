@@ -1,0 +1,59 @@
+@use "../../global" as g;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+
+  &__title {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @include g.font-size(20);
+    @include g.mq(md) {
+      margin-bottom: 10px;
+    }
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding: 20px;
+
+    @include g.font-size(18);
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+  }
+  &__footer {
+    margin-bottom: 20px;
+  }
+  &__link {
+    text-align: center;
+  }
+}
+
+.card-wrapper {
+  .card {
+    margin-bottom: 30px;
+  }
+
+  &--col3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      width: calc(33.33333% - 60px / 3);
+      margin-right: 30px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
