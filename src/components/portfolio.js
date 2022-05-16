@@ -5,7 +5,7 @@ import Card from "./card";
 export default function Portfolio() {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
+      allMdx(sort: {order: ASC, fields: frontmatter___order}) {
         nodes {
           frontmatter {
             title
