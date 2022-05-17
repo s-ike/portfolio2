@@ -1,6 +1,7 @@
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export default function Card({ title, desc, method, skills, date, link}) {
+export default function Card({ title, desc, method, skills, date, link, image}) {
   const skillItems = skills.map((skill, i) => (
     <span key={i}>
       {skill}{(skills.length - 1 !== i) ? ',' : ''}
@@ -9,6 +10,12 @@ export default function Card({ title, desc, method, skills, date, link}) {
 
   return (
     <>
+      <div className="card__header">
+        <GatsbyImage
+          image={image}
+          alt={title + " image"}
+        />
+      </div>
       <div className="card__body">
         <div className="card__title">{title}</div>
         <ul className="card__list">

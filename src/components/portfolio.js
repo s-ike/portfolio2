@@ -14,6 +14,11 @@ export default function Portfolio() {
             date
             skills
             link
+            card_image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
           id
         }
@@ -38,6 +43,7 @@ export default function Portfolio() {
                 method={node.frontmatter.method}
                 date={node.frontmatter.date}
                 link={node.frontmatter.link}
+                image={node.frontmatter.card_image.childImageSharp.gatsbyImageData}
               />
             </div>
           ))
