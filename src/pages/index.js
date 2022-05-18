@@ -14,10 +14,7 @@ export default function Home({ data }) {
         description="ポートフォリオサイト"
       />
       <Hero title={data.site.siteMetadata.title} />
-      <Layout
-        title={data.site.siteMetadata.title}
-        author={data.site.siteMetadata.author}
-      >
+      <Layout>
         <Aboutme
           author={data.site.siteMetadata.author}
         />

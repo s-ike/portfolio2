@@ -1,0 +1,8 @@
+@use "../../global" as g;
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+}
